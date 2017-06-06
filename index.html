@@ -97,10 +97,9 @@ canvas{
     const start = (event) => {
         console.log(event);
         //判断几根手指
-        if(event.touches.length != 1){
-            return false;
+        if(event.touches.length == 1){
+            event.preventDefault();
         }
-        event.preventDefault();
 
         var touch = event.targetTouches[0];
         console.log(canvas.offsetLeft, canvas.offsetTop);
